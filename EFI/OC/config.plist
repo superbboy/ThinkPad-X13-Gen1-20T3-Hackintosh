@@ -62,6 +62,14 @@
                     <key>Path</key>
                     <string>SSDT-Thinkpad_Clickpad.aml</string>
                 </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>SSDT-SBUS-MCHC.aml</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-SBUS-MCHC.aml</string>
+                </dict>
             </array>
             <key>Delete</key>
             <array>
@@ -673,6 +681,24 @@
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>RTCMemoryFixup.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.7 | RTCMemoryFixup.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RTCMemoryFixup</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
             </array>
             <key>Block</key>
             <array>
@@ -1102,7 +1128,7 @@
                 <key>ConsoleAttributes</key>
                 <integer>0</integer>
                 <key>HibernateMode</key>
-                <string>None</string>
+                <string>NVRAM</string>
                 <key>HibernateSkipsPicker</key>
                 <false/>
                 <key>HideAuxiliary</key>
@@ -1326,7 +1352,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>keepsyms=1 igfxonln=1 alcid=11</string>
+                    <string>keepsyms=1 igfxonln=1 rtcfx_exclude=80-AB</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1714,7 +1740,7 @@
                     <key>Comment</key>
                     <string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>Size</key>
                     <integer>4096</integer>
                     <key>Type</key>
